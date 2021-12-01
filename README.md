@@ -1,10 +1,10 @@
 # Lacework AKS K8s Demo
 This repo with provision an AKS Cluster using Terraform and add the Lacework Agent on Microsoft Azure Kubernetes Service.
   
-### Get Started
+### 1. Get Started
 Install the Azure CLI
 ```bash
-brew 
+brew install azure-cli
 ```
   
 Link your Azure CLI to your account with:  
@@ -45,7 +45,7 @@ export ARM_TENANT_ID=<insert the tenant from above>
 export ARM_CLIENT_SECRET=<insert the password from above>
 ```
   
-### Provision AKS via Terraform
+### 2. Provision AKS via Terraform
 Initialise your terraform.  
 ```bash
 terraform init
@@ -71,7 +71,7 @@ You can verify that you can connect to the cluster with:
 kubectl get nodes
 ```
   
-### Installing the Lacework Agent
+### 3. Installing the Lacework Agent
 In the Lacework Console, download the two Kubernetes YAML files. Navigate to `Settings > Agents`. Either use an existing agent access token or create a new agent token by clicking + Create New. Click Install Options. Download Kubernetes Config and Kubernetes Orchestration.  
   
 Using the kubectl command line interface, add the Lacework configuration file into the cluster.  
@@ -88,7 +88,7 @@ Repeat the above steps for each Kubernetes cluster. The `config.json` file is em
   
 `kubectl replace -f lacework-cfg-k8s.yaml`   
   
-### Check that LW Agent is running on K8s
+### 4. Check that LW Agent is running on K8s
 You can check what is running on the pod with:   
   
 `kubectl get pods`
