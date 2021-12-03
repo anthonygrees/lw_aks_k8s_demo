@@ -1,4 +1,6 @@
 # Lacework AKS K8s Demo
+
+[![CIS](https://app.soluble.cloud/api/v1/public/badges/733ddd27-6da8-4c31-868b-bec81a68ef73.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_aks_k8s_demo)  [![IaC](https://app.soluble.cloud/api/v1/public/badges/0b471ba2-e283-4357-8067-d80961252c51.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_aks_k8s_demo)  
 This repo with provision an AKS Cluster using Terraform and add the Lacework Agent on Microsoft Azure Kubernetes Service.
   
 [![CIS](https://app.soluble.cloud/api/v1/public/badges/733ddd27-6da8-4c31-868b-bec81a68ef73.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_aks_k8s_demo) [![IaC](https://app.soluble.cloud/api/v1/public/badges/0b471ba2-e283-4357-8067-d80961252c51.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_aks_k8s_demo)
