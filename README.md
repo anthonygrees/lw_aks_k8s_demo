@@ -65,7 +65,7 @@ terraform apply
   
 Your output will look like:  
 ```bash
-azurerm_kubernetes_cluster.cluster: Creation complete after 5m29s [id=/subscriptions/fbd05561-d1f4-47bb-8dc4-46a2b416f82f/resourcegroups/reesy-aks-cluster/providers/Microsoft.ContainerService/managedClusters/reesy-aks]
+azurerm_kubernetes_cluster.cluster: Creation complete after 5m29s [id=/subscriptions/XXX-XXXXXX-XXXXXX-XXXXX-XXXXX/resourcegroups/reesy-aks-cluster/providers/Microsoft.ContainerService/managedClusters/reesy-aks]
 
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
