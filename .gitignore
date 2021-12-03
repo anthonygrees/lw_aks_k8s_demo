@@ -1,4 +1,6 @@
 .DS_Store
+lacework-cfg-k8s-token.yaml
+azurek8s
 # Local .terraform directories
 **/.terraform/*
 

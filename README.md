@@ -45,6 +45,11 @@ export ARM_TENANT_ID=<insert the tenant from above>
 export ARM_CLIENT_SECRET=<insert the password from above>
 ```
   
+To get a list of support K8s versions:
+```bash
+az aks get-versions --location uksouth
+```
+  
 ### 2. Provision AKS via Terraform
 Initialise your terraform.  
 ```bash
@@ -56,15 +61,30 @@ Execute the terraform.
 terraform apply
 ```
   
+Your output will look like:  
+```bash
+azurerm_kubernetes_cluster.cluster: Creation complete after 5m29s [id=/subscriptions/fbd05561-d1f4-47bb-8dc4-46a2b416f82f/resourcegroups/reesy-aks-cluster/providers/Microsoft.ContainerService/managedClusters/reesy-aks]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+kube_config = apiVersion: v1
+clusters:
+```
+
 Once provisioned, you can export the kubeconfig with:  
 ```bash
 echo "$(terraform output kube_config)" > azurek8s
 ```
   
-You can add the credentials to your kubeconfig or temporarily use the file as your kubeconfig with:  
+You can add the credentials to your kubeconfig (`~/.kube/config`) with:  
 ```bash
-export KUBECONFIG="${PWD}/azurek8s"
+KUBECONFIG=~/.kube/config:/path/to/another/config.yml kubectl config view --flatten > ~/.kube/config-new.yaml
+
+cp ~/.kube/config-new.yaml ~/.kube/config
 ```
+*Note*:Do not pipe directly to the config file! Otherwise, it will delete all your old K8s content!  
   
 You can verify that you can connect to the cluster with:  
 ```bash
