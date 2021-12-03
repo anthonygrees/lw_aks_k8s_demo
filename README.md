@@ -52,10 +52,11 @@ export ARM_TENANT_ID=<insert the tenant from above>
 export ARM_CLIENT_SECRET=<insert the password from above>
 ```
   
-To get a list of support K8s versions:
+To get a list of supported K8s versions, run the following:
 ```bash
-az aks get-versions --location uksouth
+az aks get-versions --location <region>
 ```
+*Note*: The terraform uses `kubernetes_version  = "1.22.2"` which is hardcoded in the `main.tf`.
   
 ### 2. Provision AKS via Terraform
 Initialise your terraform.  
