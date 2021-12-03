@@ -2,6 +2,11 @@
 This repo with provision an AKS Cluster using Terraform and add the Lacework Agent on Microsoft Azure Kubernetes Service.
   
 [![CIS](https://app.soluble.cloud/api/v1/public/badges/733ddd27-6da8-4c31-868b-bec81a68ef73.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_aks_k8s_demo) [![IaC](https://app.soluble.cloud/api/v1/public/badges/0b471ba2-e283-4357-8067-d80961252c51.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_aks_k8s_demo)
+  
+### 0. Lacework
+Once deployed, you will see the AKS cluster in the Lacework Polygraph.  
+  
+![Lacework Poly](/images/aks_poly.png)
 
 ### 1. Get Started
 Install the Azure CLI
@@ -124,3 +129,9 @@ lacework-agent-9gfwq                  1/1     Running   0          17d
 lacework-agent-v96s2                  1/1     Running   0          17d  
 lacework-agent-vds79                  1/1     Running   0          17d  
 ```
+  
+### 5. Lacework UI
+In the Lacework UI, navigate to `Resources -> Kubernetes` and filter on your AKS cluster.  It may take up to 1 hour for the polygraph to show your K8s cluster.  
+  
+![Lacework Poly](/images/aks_polygraph.png)
+  
