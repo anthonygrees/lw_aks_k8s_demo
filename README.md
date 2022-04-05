@@ -116,6 +116,18 @@ Repeat the above steps for each Kubernetes cluster. The `config.json` file is em
   
 `kubectl replace -f lacework-cfg-k8s.yaml`   
   
+Make sure you have the correct tags for the cluster name in your `lacework-cfg-k8s.yaml`.  It MUST be `KubernetesCluster` or the Lacework UI will not recognise it.   
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lacework-config
+data:
+  config.json: |
+    {"tokens":{"AccessToken":"add_your_token_here"}, "tags":{"KubernetesCluster":"reesy.aks.local"}, "serverurl":"https://api.lacework.net"}
+```
+  
+  
 ### 4. Check that LW Agent is running on K8s
 You can check what is running on the pod with:   
   
