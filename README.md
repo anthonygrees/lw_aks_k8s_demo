@@ -116,7 +116,7 @@ Repeat the above steps for each Kubernetes cluster. The `config.json` file is em
   
 `kubectl replace -f lacework-cfg-k8s.yaml`   
   
-Make sure you have the correct tags for the cluster name in your `lacework-cfg-k8s.yaml`.  It MUST be `KubernetesCluster` or the Lacework UI will not recognise it.   
+*Note:* Make sure you have the correct tags for the cluster name in your `lacework-cfg-k8s.yaml`.  It MUST be `KubernetesCluster` or the Lacework UI will not recognise it.   
 ```yaml
 apiVersion: v1
 kind: ConfigMap
